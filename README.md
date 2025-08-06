@@ -95,13 +95,13 @@ PINECONE_API_KEY="your-pinecone-api-key-here"
 GEMINI_API_KEY="your-gemini-api-key-here"
 ```
 
-### Step 4: Create the Vector Database
+### Step 5: Create the Vector Database
 
 ```bash
 python src/store_index.py
 ```
 
-### Step 5: Run the Chatbot
+### Step 6: Run the Chatbot
 ```bash
 python app.py
 ```
