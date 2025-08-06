@@ -108,7 +108,7 @@ python app.py
 
 ## AWS Cloud Deployment (Automatic)
 
-#### 1. Create IAM User for GitHub Actions
+### 1. Create IAM User for GitHub Actions
 1. Go to AWS IAM Console
 2. Create new user named `github-actions-user`
 3. Attach these policies:
@@ -116,12 +116,12 @@ python app.py
    - `AmazonEC2FullAccess`
 4. Create access keys and save them securely
 
-#### 2. Create ECR Repository
+### 2. Create ECR Repository
 1. Go to AWS ECR Console
 2. Create repository named `medical-chatbot`
 3. Copy the repository URI 
 
-#### 3. Create EC2 Instance
+### 3. Create EC2 Instance
 1. Launch new EC2 instance:
    - **AMI**: Ubuntu 22.04 LTS
    - **Instance Type**: t3.large
@@ -136,13 +136,13 @@ sudo usermod -aG docker ubuntu
 newgrp docker
 ```
 
-#### 4. Set Up GitHub Self-Hosted Runner
+### 4. Set Up GitHub Self-Hosted Runner
 1. In your GitHub repo → Settings → Actions → Runners
 2. Click "New self-hosted runner"
 3. Select Linux x64
 4. then run the commands GitHub provides on your EC2 instance
 
-#### 5. Add Secrets to GitHub Repository
+### 5. Add Secrets to GitHub Repository
 Go to your GitHub repo → Settings → Secrets and variables → Actions → New repository secret
 
 Add these secrets:
